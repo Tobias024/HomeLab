@@ -102,6 +102,22 @@ Dado que configuramos ya el DHCP en el servidor, es importante asegurarse que el
 
 ![image.png](image%2013.png)
 
+##Scopes
+Para crear los Scopes para cada VLAN tenemos que:
+1. Tools -> DHCP
+2. desplegar a la izq en el nombre de la maquina y hacer click derecho en IPV4
+3. Seleccionar "New Scope"
+   Para DEV:
+     - Ip Start / End: 10.0.20.100 10.0.20.200
+     - Default Gateway: 10.0.20.1 (eS EL pfSense en esa VLAN)
+     - DNS: 10.0.10.2 (El Windows server mismo)
+   Para el DMZ:
+     - Ip Start / End: 10.0.30.100 10.0.30.200
+     - Default Gateway: 10.0.30.1 (eS EL pfSense en esa VLAN)
+     - DNS: 10.0.10.2
+   <img width="876" height="481" alt="image" src="https://github.com/user-attachments/assets/16800283-324b-4744-b752-6e3076d99f27" />
+
+
 ## Wazuh Agent
 
 Una vez seteado Wazuh Manager en el [Servidor de Seguridad](../Wazuh-Security-Server/README.md), podemos instalar u agente dentro del AD.
