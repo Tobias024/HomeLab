@@ -93,3 +93,39 @@ Ya debería haber quedado configurado. Podemos ir a la parte de "diagnosticos" e
 ![*"0% packet loss"*, **Success!**](image%209.png)
 
 *"0% packet loss"*, **Success!**
+
+
+## VLANs
+Ingresando por web a 10.0.10.1 ingresamos al GUI de pfsense.
+Dentro de "Interfaces" vamos a "Assignments"
+Acá vamos a encontrar "WAN" y "LAN" y debajo "Available netwaork ports". Tenemos que dar a "Add" para cada uno y se les van a asignar de nombre OPT1 y OPT2.
+Una vez agregados, hacemos click en cada uno y marcamos "Enable Interface", cambiamos los nombres, configuramos IPV4 estatica y damos a "Save" abajo y luego "Apply" arriba
+<img width="1135" height="246" alt="image" src="https://github.com/user-attachments/assets/2cc75dba-bff0-44a3-ae47-307cc2251004" />
+
+### Reglas
+Por defecto, las nuevas interfaces van a tener bloqueado todo hasta que creemos una regla en pfsense:
+1. Vamos a "Firewall" -> Rules -> elegimos las interfaces nuevas
+2. agregamos una nueva donde:
+    - Action: Pass
+    - Protocol: Any
+    - source: DEV_VLAN subnets (o la interfaz en cuestion)
+    - Destination: any
+  <img width="1247" height="652" alt="image" src="https://github.com/user-attachments/assets/1680ac68-132a-434e-9993-3a689ea0205c" />
+3. Damos a "Save" y desp a "Apply"
+
+### DHCP Relay
+Para que los equipos que estén en VLANs distintas a las de nuestro [Windows Server DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md), para que estos puedan recibir una IP,necesitamos configurar el Relay para que cuando el router reciba el pedido pueda direccionarlo al servidor responsable.
+Arriba en "Services" damos a "DHCP Relay. Dentro de esta pantalla, vamos a ver las Interfaces que acabamos de configurar y seteamos en "Upstram Servers" la IP del Windows Server (10.0.10.2)
+<img width="1170" height="715" alt="image" src="https://github.com/user-attachments/assets/cfae33e5-1b6b-4b67-88a6-7912b1a16824" />
+
+Es necesario tener los Scopes configurados en [Windows Server como Active Directory, DNS y DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md)
+
+
+
+  
+
+
+
+
+
+
