@@ -32,7 +32,7 @@ Esta parte explica como se estructuró la red, que herramientas se usaron, como 
 
 ### Zona Usuarios (LAN/VLAN 20)
 
-- Terminal Host con Windows 11 (y Agente Wazuh)
+- [Terminal Host con Windows 11](/docs/W11DEV/README.md)
 - Terminal Host Sec linux
 - Terminal atacante con Kali
 
