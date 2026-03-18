@@ -44,6 +44,16 @@ Contamos con 8 nucleos (16 buses) y 48 gb de Ram para distribuir entre las maqui
 2. Crear una red para el proyecto:
     - Acceder a las redes y en la parte de "Nat networks" crear una nueva y modificar el nombre y rango IP.
         
-        ![image.png](docs/image.png)
-        
+        <img width="806" height="676" alt="image" src="https://github.com/user-attachments/assets/f1eb3ae0-bdf8-4851-8f52-c30111bd76cc" />
+
 3. Configurar las Distintas MV (*Links en "[Topología](#topología)"*)
+
+## VLANs
+Vamos a contar con 3 VLANs por "cables fisicos" distribuidos para el Servidor de produccion (DMZ), servidores de gestion y Hosts. En una situacion real probablemente tendríamos muchas mas VLANs creadas para aislar los distintos sectores de la empresa para que en caso de que uno se vea comprometido no afecte al resto, siendo una barrera más de seguridad.
+Dentro de la configuracion Red de la VM de pfsense prendemos los adaptadores y configuramos:
+  - Adaptador 1: Puente (Bridge) o NAT (Tu salida a Internet/WAN).
+  - Adaptador 2: Red Interna -> Nombre: VLAN_10_MGMT (Donde está el AD y Wazuh).
+  - Adaptador 3: Red Interna -> Nombre: VLAN_20_DEV (Para el Windows 11).
+  - Adaptador 4: Red Interna -> Nombre: VLAN_30_DMZ (Para el Server de Producción).
+    <img width="777" height="389" alt="image" src="https://github.com/user-attachments/assets/e4646269-5eca-429c-9c90-63702a307422" />
+El resto de las configuraciones de PFsense lo vamos a seguir en [Firewall (PFsense)](docs/Firewall-PFsense/README.md)
