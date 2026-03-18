@@ -24,11 +24,9 @@ Esta parte explica como se estructuró la red, que herramientas se usaron, como 
 
 ### **Zona Servidores DMZ/ VLAN 10:**
 
-[Windows Server como Active Directory, DNS y DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md)
-
-[Servidor de Seguridad con Wazuh Manager](docs/Wazuh-Security-Server/README.md)
-
-[Servidor Linux de Produccion (con servicios en Docker) ](docs/Servidor-Linux-Produccion/README.md)
+- [Windows Server como Active Directory, DNS y DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md) 
+- [Servidor de Seguridad con Wazuh Manager](docs/Wazuh-Security-Server/README.md)
+- [Servidor Linux de Produccion (con servicios en Docker) ](docs/Servidor-Linux-Produccion/README.md)
 
 ### Zona Usuarios (LAN/VLAN 20)
 
