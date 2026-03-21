@@ -9,6 +9,8 @@ Configuramos la maquina virtual para que esté dentro de la VLAN de DEV yendo a 
 Primero corroboramos que la pc encuentre el dominio haciendo: nslookup lab.local.
 
 Sabemos que todo está en orden dado a que devuelve la IP del Windows Server (10.0.10.2)
+<img width="497" height="414" alt="image" src="https://github.com/user-attachments/assets/06643bae-26c5-458e-8da7-038d3371755a" />
+
 Si dijera "Non-existent domain", El DNS no estaría llegando y la unión va a fallar. Por lo que tendríamos que revisar el Scope del DHCP en el AD para confirmar que el DNS primario sea la 10.0.10.2.
 Ahora:
 1. Buscamos "Configuración avanzada del sistema" (o sysdm.cpl en el buscador y dale Enter).
