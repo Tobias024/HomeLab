@@ -17,6 +17,8 @@ Documentar el armado y configuraciones por sección como prueba de conocimiento 
 # Topología
 
 Esta parte explica como se estructuró la red, que herramientas se usaron, como y por qué. La descripción del paso a paso está linkeado en cada titulo.
+<img width="1335" height="645" alt="image" src="https://github.com/user-attachments/assets/79a6f756-e747-4387-970e-f3a0f9064377" />
+
 
 ## **La red consta de:**
 
