@@ -38,7 +38,7 @@ Repetimos los pasos que hicimos para el [agente en el AD](https://github.com/Tob
  -  "Agregar agente"
  -  Correr los comandos que nos provee en la terminal como administrador.
 
-* En una situación real, donde los empleados son demasiados para instalar uno a uno se debe manejar con un GPO o usando terraform con Ansible.
+_En una situación real, donde los empleados son demasiados para instalar uno a uno se debe manejar con un GPO o usando terraform con Ansible._
 
 ## Git e IDE
 Al tratarse de un Dev, este host va a cumplir el roll de empujar repos al entorno de producción disparando los triggers necesarios. Para esto vamos a necessitar tanto git como algun IDE como VSCode.
