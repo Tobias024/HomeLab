@@ -24,17 +24,20 @@ Esta parte explica como se estructuró la red, que herramientas se usaron, como 
 
 [Firewall (PFsense)](docs/Firewall-PFsense/README.md)
 
-### **Zona Servidores DMZ/ VLAN 10:**
+### **Zona Servidores (LAN/VLAN 10):**
 
 - [Windows Server como Active Directory, DNS y DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md) 
 - [Servidor de Seguridad con Wazuh Manager](docs/Wazuh-Security-Server/README.md)
-- [Servidor Linux de Produccion (con servicios en Docker) ](docs/Servidor-Linux-Produccion/README.md)
 
-### Zona Usuarios (LAN/VLAN 20)
+
+### Zona Usuarios (LAN/VLAN 20 Y 40)
 
 - [Terminal Host con Windows 11](/docs/W11DEV/README.md)
 - Terminal Host Sec linux
 - Terminal atacante con Kali
+
+### Zona DMZ (LAN/VLAN 30)
+- [Servidor Linux de Produccion (con servicios en Docker) ](docs/Servidor-Linux-Produccion/README.md)
 
 # VirtualBox
 
