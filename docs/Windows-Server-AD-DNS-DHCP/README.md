@@ -103,7 +103,7 @@ Dado que configuramos ya el DHCP en el servidor, es importante asegurarse que el
 ![image.png](image%2013.png)
 
 ## Scopes para las VLANs
-
+Tenemos que asegurarnos de también tener un scope para cada VLAN. Abajo muestro la configuracion para 10.0.20. pero sería similar para las demás que creemos.
 1. Tools -> DHCP
 2. desplegar a la izq en el nombre de la maquina y hacer click derecho en IPV4
 3. Seleccionar "New Scope"
