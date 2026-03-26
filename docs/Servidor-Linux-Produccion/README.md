@@ -13,6 +13,13 @@ El enrutamiento entre los contenedores van a ser manejados con Docker y traefik 
 
 
 ## Wazuh Agent
+Usamos el siguiente codigo de wazuh:
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --dearmor | sudo tee /usr/share/keyrings/wazuh.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+sudo apt-get update
+WAZUH_MANAGER='10.0.10.100' sudo apt-get install wazuh-agent -y
+sudo systemctl enable wazuh-agent
+sudo systemctl start wazuh-agent
 
 ## Docker
 
