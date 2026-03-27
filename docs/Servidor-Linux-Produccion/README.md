@@ -13,15 +13,17 @@ El enrutamiento entre los contenedores van a ser manejados con Docker y traefik 
 
 
 ## Wazuh Agent
-Usamos el siguiente codigo de wazuh:
-curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --dearmor | sudo tee /usr/share/keyrings/wazuh.gpg > /dev/null
-echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
-sudo apt-get update
-WAZUH_MANAGER='10.0.10.100' sudo apt-get install wazuh-agent -y
-sudo systemctl enable wazuh-agent
-sudo systemctl start wazuh-agent
+Ingresamos via ssh desde alguna de las terminales y una vez adentro ingresamos al browser accediendo a wazuh y launcheando un nuevo agente como las veces anteriores
+
+
+En mi caso esto no fue suficiente, la variable se creo sin la ip del servidor de seguridad, lo solucione entrando al archivo y configurandolo yo mismo:
+(`sudo nano /var/ossec/etc/ossec.conf`)
+y cambiando "<address>MANAGER_IP</address>" con la ip del servidor de seguridad.
+
 
 ## Docker
+ (`sudo apt install docker.io docker-compose-v2 -y
+sudo usermod -aG docker prodadmin`)
 
 ## Traefik
 
