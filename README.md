@@ -1,4 +1,4 @@
-# HomeLab v2
+# HomeLab
 
 # Descripción
 
