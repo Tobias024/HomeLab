@@ -6,13 +6,13 @@ Esta documentación muestra el paso a paso de distintas configuraciones simuland
 
 # Objetivo
 
-Poner en práctica conocimiento teórico, aplicando el uso de herramientas tanto para Seguridad como para Infraestructura y redes:
+Poner en práctica conocimiento teórico, aplicando el uso de herramientas tanto para Seguridad como para Infraestructura y redes.
+La documentación va a estar dividida según casos de pruebas separando segun su fin:
 
-- Configurar medidas de seguridad
-- Probar ataques y ver respuesta de las defensas
-- Setear un espacio de produccion local, implementar automatizaciones y flujos de produccion.
+- Foco en Seguridad: Acá van a ser testeadas las configuraciones de DNS, AD, DHCP, Siem, ataques y logs
 
-Documentar el armado y configuraciones por sección como prueba de conocimiento y experiencia.
+- Foco en Infraestructura: Este en cambió tiene foco en la disponibilidad, el rendimiento, la seguridad como infraestructura y la identidad.
+
 
 # Topología
 
