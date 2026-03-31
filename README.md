@@ -27,17 +27,25 @@ Esta parte explica como se estructuró la red, que herramientas se usaron, como 
 ### **Zona Servidores (LAN/VLAN 10):**
 
 - [Windows Server como Active Directory, DNS y DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md) 
-- [Servidor de Seguridad con Wazuh Manager](docs/Wazuh-Security-Server/README.md)
 
 
-### Zona Usuarios (LAN/VLAN 20 Y 40)
+### Zona Usuarios (LAN/VLAN 20)
 
 - [Terminal Host con Windows 11](/docs/W11DEV/README.md)
+
+
+### Zona DMZ (LAN/VLAN 30)
+- [Servidor Linux de Produccion  ](docs/Servidor-Linux-Produccion/README.md)
+
+
+### Zona Usuarios (LAN/VLAN 40)
+
 - Terminal Host Sec linux
 - Terminal atacante con Kali
 
-### Zona DMZ (LAN/VLAN 30)
-- [Servidor Linux de Produccion (con servicios en Docker) ](docs/Servidor-Linux-Produccion/README.md)
+### Zona Servidor Seguridad(LAN/VLAN 50)
+- [Servidor de Seguridad con Wazuh Manager](docs/Wazuh-Security-Server/README.md)
+
 
 # VirtualBox
 
