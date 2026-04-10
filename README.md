@@ -17,34 +17,33 @@ La documentación va a estar dividida según casos de pruebas separando segun su
 # Topología
 
 Esta parte explica como se estructuró la red, que herramientas se usaron, como y por qué. La descripción del paso a paso está linkeado en cada titulo.
-<img width="1335" height="645" alt="image" src="https://github.com/user-attachments/assets/79a6f756-e747-4387-970e-f3a0f9064377" />
+![Topografia](https://github.com/user-attachments/assets/ae4a7369-de41-4b1d-9954-ab4f8237cf3e)
 
 
-## **La red consta de:**
+
+## La red consta de:
 
 [Firewall (PFsense)](docs/Firewall-PFsense/README.md)
 
-### **Zona Servidores (LAN/VLAN 10):**
+### VLAN 10 — Management
+- [Windows Server — AD, DNS, DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md)
 
-- [Windows Server como Active Directory, DNS y DHCP](docs/Windows-Server-AD-DNS-DHCP/README.md) 
-
-
-### Zona Usuarios (LAN/VLAN 20)
-
-- [Terminal Host con Windows 11](/docs/W11DEV/README.md)
-
-
-### Zona DMZ (LAN/VLAN 30)
-- [Servidor Linux de Produccion  ](docs/Servidor-Linux-Produccion/README.md)
-
-
-### Zona Usuarios (LAN/VLAN 40)
-
-- Terminal Host Sec linux
-- Terminal atacante con Kali
-
-### Zona Servidor Seguridad(LAN/VLAN 50)
+### VLAN 20 — Security
 - [Servidor de Seguridad con Wazuh Manager](docs/Wazuh-Security-Server/README.md)
+
+### VLAN 30 — Dev / CI-CD
+- [W11 Dev Host](docs/W11DEV/README.md)
+- [Servidor CI/CD — Gitea + Jenkins](docs/Servidor-CICD/README.md)
+
+### VLAN 40 — DMZ
+- [Servidor DMZ — Kong API Gateway](docs/Servidor-DMZ/README.md)
+
+### VLAN 50 — Producción
+- [Servidor Linux de Producción — Apps, Keycloak, Traefik](docs/Servidor-Linux-Produccion/README.md)
+
+### VLAN 60 — Attack Lab
+- Terminal Sec Host
+- Terminal atacante con Kali
 
 
 # VirtualBox
